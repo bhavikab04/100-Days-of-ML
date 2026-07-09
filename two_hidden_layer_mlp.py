@@ -23,7 +23,7 @@ X = digits.data     # shape (1797, 64) --> 1797 images, 64 pixels each (flattene
 y = digits.target
 np.random.seed(42)
 
-w0 = np.random.randn(X.shape[1],64) * np.sqrt(2/X.shape[1]) #using randn instead of rand because rand give only (0,1) values but randn gives negative values too
+w0 = np.random.randn(X.shape[1],64) * np.sqrt(2/X.shape[1]) #using randn instead of rand because rand give only (0,1) values but randn gives negative values too (it's basically (64,64))
 w1 = np.random.randn(64,32) * np.sqrt(2/64) #also randn generates values of N(0,1), i.e, mean 0 and variance 1. when it is multiplied by a constant C, the variance scales as C^2(as standard dev gets multiplied by C) so we multiply by the sqrt of 2/n
 w2 = np.random.randn(32,10) * np.sqrt(2/32)
 b0 = np.zeros(64)
