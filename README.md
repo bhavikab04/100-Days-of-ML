@@ -1,5 +1,5 @@
 # 100-Days-of-ML
-Here begins my journey to learn and solidify ML and DL concepts 
+Here begins my journey to learn, revise and solidify ML and DL concepts 
 
 ## Day 1 — Neural networks from scratch (NumPy)
 - Implemented **batch gradient descent linear regression** from scratch in NumPy; derived MSE gradients by hand, converged to correct parameters.
