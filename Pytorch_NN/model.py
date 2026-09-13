@@ -8,7 +8,7 @@ class MLP(nn.Module): #we are defining class MLP and it inherits form nn.Module,
         self.fc0 = nn.Linear(64,64) #replaces w0+b0; note that nn.LInear is a class, so here we are making fc0 an object of that class
         self.fc1 = nn.Linear(64,32) #replaces w1 + b1
         self.fc2 = nn.Linear(32,10) #replaces w2+b2
-    def forward(self, x): #it is a method form the parent class, and the __call__ looks for the forward method
+    def forward(self, x): #it is a method from the parent class, and the __call__ looks for the forward method
         a1 = F.relu(self.fc0(x)) #call fc0 object on x (triggers its __call__), then relu; basically even tho fc0 is an object, it is a callable object as the original class used python's __call__ function, which enables the object to be callable. 
         # ...actually runs fc0.__call__(x), which runs fc0.forward(x) internally
         a2 = F.relu(self.fc1(a1))
